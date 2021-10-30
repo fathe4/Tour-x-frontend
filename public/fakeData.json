@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "location": "This is location",
+        "img": "https://demo.egenslab.com/html/tourx/assets/images/package/p-1.png",
+        "price": 180,
+        "day": 5,
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+        "rating": "8k"
+    },
+    {
+        "id": 2,
+        "location": "This is location",
+        "img": "https://demo.egenslab.com/html/tourx/assets/images/package/p-1.png",
+        "price": 180,
+        "day": 5,
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+        "rating": "8k"
+    },
+    {
+        "id": 3,
+        "location": "This is location",
+        "img": "https://demo.egenslab.com/html/tourx/assets/images/package/p-1.png",
+        "price": 180,
+        "day": 5,
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+        "rating": "8k"
+    },
+    {
+        "id": 4,
+        "location": "This is location",
+        "img": "https://demo.egenslab.com/html/tourx/assets/images/package/p-1.png",
+        "price": 180,
+        "day": 5,
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+        "rating": "8k"
+    },
+    {
+        "id": 5,
+        "location": "This is location",
+        "img": "https://demo.egenslab.com/html/tourx/assets/images/package/p-1.png",
+        "price": 180,
+        "day": 5,
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+        "rating": "8k"
+    },
+    {
+        "id": 6,
+        "location": "This is location",
+        "img": "https://demo.egenslab.com/html/tourx/assets/images/package/p-1.png",
+        "price": 180,
+        "day": 5,
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+        "rating": "8k"
+    },
+    {
+        "id": 7,
+        "location": "This is location",
+        "img": "https://demo.egenslab.com/html/tourx/assets/images/package/p-1.png",
+        "price": 180,
+        "day": 5,
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+        "rating": "8k"
+    }
+]
