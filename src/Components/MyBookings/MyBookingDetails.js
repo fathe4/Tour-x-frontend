@@ -22,17 +22,26 @@ const MyBookingDetails = (props) => {
 
     const handleDelete = (id) => {
         setIsLoading(true)
-        fetch(`https://sleepy-atoll-70174.herokuapp.com/bookings/${id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount) {
-                    alert('DELETED')
-                    const remainingUser = userOrders.filter(order => order._id !== id)
-                    setUserOrders(remainingUser)
-                }
-            }).finally(() => setIsLoading(false))
+        if (window.confirm('are you sure?')) {
+            fetch(`https://sleepy-atoll-70174.herokuapp.com/bookings/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+
+                    if (data.deletedCount) {
+                        alert('DELETED')
+                        const remainingUser = userOrders.filter(order => order._id !== id)
+                        setUserOrders(remainingUser)
+                    }
+
+                }).finally(() => setIsLoading(false))
+        } else {
+            fetch('https://sleepy-atoll-70174.herokuapp.com/all-bookings')
+                .then(res => res.json())
+                .then(data => { setUserOrders(data) })
+                .finally(() => setIsLoading(false))
+        }
 
     }
 

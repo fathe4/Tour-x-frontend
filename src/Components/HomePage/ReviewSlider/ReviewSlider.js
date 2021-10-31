@@ -3,15 +3,19 @@ import { Carousel } from '3d-react-carousal';
 
 const ReviewSlider = () => {
     const slides = [
-        <img src="https://picsum.photos/1200/500/?random" alt="1" />,
-        <img src="https://picsum.photos/1200/501/?random" alt="2" />,
-        <img src="https://picsum.photos/1200/502/?random" alt="3" />,
-        <img src="https://picsum.photos/1200/503/?random" alt="4" />,
-        <img src="https://picsum.photos/1200/504/?random" alt="5" />];
+        <img width='1200px' height='600px' src="https://i.ibb.co/L9phDXY/elizeu-dias-SEq9dy-ZSe6c-unsplash.jpg" alt="1" />,
+        <img width='1200px' height='600px' src="https://i.ibb.co/Gt6v59V/joshua-earle-87-Jy-Mb9-Zf-U-unsplash.jpg" alt="2" />,
+        <img width='1200px' height='600px' src="https://i.ibb.co/86XGyRZ/alfred-aloushy-Ow-jo-AY8-Ny-Y-unsplash.jpg" alt="3" />,
+        <img width='1200px' height='600px' src="https://i.ibb.co/mv9P4tT/jake-ingle-t-Za-A8-Vq-JG3g-unsplash.jpg" alt="4" />,
+    ];
     return (
-        <div>
-            <h2 className='text-center my-5'>Gallery</h2>
+        <div style={{ margin: '120px 0' }}>
+            <h2 className='text-center my-5'><span className='primary-color fw-bold'> TourX</span> Gallery</h2>
             <Carousel slides={slides} autoplay={false} interval={1000} />
+
+
+
+
         </div>
     );
 };

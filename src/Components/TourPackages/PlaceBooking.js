@@ -47,7 +47,7 @@ const PlaceBooking = () => {
 
                 if (result.insertedId) {
                     alert('Booking Success')
-                    // reset()
+                    reset()
                 }
             })
 

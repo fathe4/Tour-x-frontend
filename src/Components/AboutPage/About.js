@@ -15,7 +15,18 @@ const About = () => {
                         <Col>
                             <h2 className='about-title'>About <i className='primary-color my-5 fw-bolder '>Tour</i> X</h2>
                             <h5 className='my-3 fw-bold'>We thrive on building a healthy and solid community for all individuals.</h5>
-                            <p className='mt-4 lh-lg'>Our institute provides care for our region’s most precious resource: human. We care for the growing needs of our community. We build systems for providing health services for individuals, families, communities and populations in general, and not just patients.  WE provided best Home care service with many facilities, we are the trust worthy platform. Our team of highly trained professionals uses the latest healing technologies to restore you to pain-free health quickly and easily. We thoroughly evaluate & treat all of the contributing root factors related to your issue. This includes, but is not limited to, your work and home stressors. We will fax the requested records directly to the Qualified Doctors day before or on the appointment day. Once the family has reached a decision, the team informs the relevant parties so final arrangements can begin. Emergency staff who are available 24 hours a day, seven days a week. These staff members are trained professionals
+                            <p className='mt-4 lh-lg'>While traveling is an as aspiration for many people, the travel industry itself isn’t always an obvious career path.
+
+                                Travel is, arguably, the world’s largest industry, encompassing a wide variety of economic activity, including airlines, restaurants, hotels, and attractions, along with the technology, marketing, public relations, etc. to support these organizations.
+
+                                Like all industries, travel/tourism/hospitality needs to fill roles at all levels and functions:
+
+                                Entry-level, like front desk staff, prep cooks, etc.
+                                Management
+                                Executive staff
+                                Outside of more traditional career roles, the travel industry is replete with startups that seek to disrupt the status quo, providing entrepreneurial opportunities, as well.
+
+                                We see diversifying the world of travel as needing both bottom-up and top-down approaches. You cannot encourage individuals to pursue roles that they aren’t going to be considered for, so it is just as important to us to work on increasing opportunities and awareness within the industry as it is to inspire people to join it.
                             </p>
                         </Col>
                         <Col >

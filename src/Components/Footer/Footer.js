@@ -20,7 +20,7 @@ const Footer = () => {
                             />
 
                         </Navbar.Brand>
-                        <p className='py-3'>Great lesson ideas and lesson plans for ESL teachers! Educators can customize lesson plans to best.</p>
+                        <p className='py-3'>While traveling is an as aspiration for many people, the travel industry itself isn’t always an obvious career path.</p>
 
                     </Col>
                     {/* Footer 2 */}

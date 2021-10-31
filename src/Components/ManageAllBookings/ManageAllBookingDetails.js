@@ -1,12 +1,12 @@
 import React from 'react';
-import { Badge, ListGroup, Spinner } from 'react-bootstrap';
+import { Badge, ListGroup } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import UseUserOrders from '../../hooks/UseUserOrders';
 
 const ManageAllBookingDetails = (props) => {
     // const [userOrders, setUserOrders] = useState([])
     // const [updateBookingStatus, setUpdateBookingStatus] = useState('Pending')
-    const { isLoading, setIsLoading } = useAuth()
+    const { setIsLoading } = useAuth()
     const { _id, locationTitle, status, date, price } = props.userOrder
     // const statusUpdate = Object.values(userOrders)
 
@@ -17,18 +17,30 @@ const ManageAllBookingDetails = (props) => {
     // DELETE ANY BOOKING
 
     const handleDelete = (id) => {
-        setIsLoading(true)
-        fetch(`https://sleepy-atoll-70174.herokuapp.com/bookings/${id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount) {
-                    alert('DELETED')
-                    const remainingUser = userOrders.filter(order => order._id !== id)
-                    setUserOrders(remainingUser)
-                }
-            }).finally(() => setIsLoading(false))
+
+        if (window.confirm('Are you sure you want to delete?')) {
+            setIsLoading(true)
+            fetch(`https://sleepy-atoll-70174.herokuapp.com/bookings/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+
+
+                    if (data.deletedCount) {
+                        alert('DELETED')
+                        const remainingUser = userOrders.filter(order => order._id !== id)
+                        setUserOrders(remainingUser)
+                    }
+
+
+                }).finally(() => setIsLoading(false))
+        } else {
+            fetch('https://sleepy-atoll-70174.herokuapp.com/all-bookings')
+                .then(res => res.json())
+                .then(data => { setUserOrders(data) })
+                .finally(() => setIsLoading(false))
+        }
 
     }
 
