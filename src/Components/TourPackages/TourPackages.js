@@ -7,7 +7,7 @@ import SingleTourPackage from './SingleTourPackage';
 const TourPackages = () => {
     const [packages, setPackages] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('https://sleepy-atoll-70174.herokuapp.com/packages')
             .then(res => res.json())
             .then(data => setPackages(data))
     }, [])

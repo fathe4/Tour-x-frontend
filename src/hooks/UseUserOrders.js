@@ -6,14 +6,11 @@ const UseUserOrders = () => {
     const [userOrders, setUserOrders] = useState([])
     const { setIsLoading } = useAuth()
 
-
-    // CHECK USER BOOKING
     useEffect(() => {
-        fetch('http://localhost:5000/all-bookings')
+        fetch('https://sleepy-atoll-70174.herokuapp.com/all-bookings')
             .then(res => res.json())
             .then(data => { setUserOrders(data) })
             .finally(() => setIsLoading(false))
-
     }, [])
 
 

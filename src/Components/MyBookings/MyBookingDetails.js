@@ -10,7 +10,7 @@ const MyBookingDetails = (props) => {
 
     // CHECK USER BOOKING
     useEffect(() => {
-        fetch('http://localhost:5000/all-bookings')
+        fetch('https://sleepy-atoll-70174.herokuapp.com/all-bookings')
             .then(res => res.json())
             .then(data => { setUserOrders(data) })
             .finally(() => setIsLoading(false))
@@ -22,7 +22,7 @@ const MyBookingDetails = (props) => {
 
     const handleDelete = (id) => {
         setIsLoading(true)
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://sleepy-atoll-70174.herokuapp.com/bookings/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -38,12 +38,14 @@ const MyBookingDetails = (props) => {
 
 
 
+
+
     return (
-        <div className='w-50 mx-auto shadow my-2'>
+        <div className='container   my-2'>
 
             <ListGroup.Item
                 as="li"
-                className="d-flex justify-content-between align-items-start"
+                className="d-flex shadow justify-content-between align-items-start"
             >
                 <div className="ms-2 me-auto">
                     <div className="fw-bold">{locationTitle} - ${price}</div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Header.css'
@@ -27,18 +27,14 @@ const Header = () => {
                             navbarScroll
                         >
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/tour-package">Tour Package</Nav.Link>
-                            <Nav.Link as={Link} to="/about-us">About Us Us</Nav.Link>
+                            <Nav.Link as={Link} to="/tour-packages">Tour Packages</Nav.Link>
+                            <Nav.Link as={Link} to="/about-us">About Us</Nav.Link>
                             <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
-                            {user?.email ? <Nav.Link as={Link} to="/my-booking">My Bookings</Nav.Link> : ''}
-                            {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    Something else here
-                                </NavDropdown.Item>
-                            </NavDropdown> */}
+                            {user?.email ? <NavDropdown title="Admin" id="basic-nav-dropdown">
+                                {user?.email ? <NavDropdown.Item as={Link} to="/my-booking">My Bookings</NavDropdown.Item> : ''}
+                                {user?.email ? <NavDropdown.Item as={Link} to="/manage-all-bookings">Manage All Bookings</NavDropdown.Item> : ''}
+                                {user?.email ? <NavDropdown.Item as={Link} to="/add-new-package">Add new package</NavDropdown.Item> : ''}
+                            </NavDropdown> : ''}
 
                         </Nav>
                         <div className="d-flex align-items-center">

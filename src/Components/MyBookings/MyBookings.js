@@ -11,7 +11,7 @@ const UserBookings = () => {
 
     // CHECK USER BOOKING
     useEffect(() => {
-        fetch('http://localhost:5000/my-bookings/userEmail', {
+        fetch('https://sleepy-atoll-70174.herokuapp.com/my-bookings/userEmail', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
