@@ -72,11 +72,11 @@ const ManageAllBookingDetails = (props) => {
     return (
         <>
 
-            <div className='w-50 mx-auto shadow my-2'>
+            <div className='container '>
 
                 <ListGroup.Item
                     as="li"
-                    className="d-flex justify-content-between align-items-start"
+                    className="d-flex justify-content-between align-items-start shadow my-2"
                 >
                     <div className="ms-2 me-auto">
                         <div className="fw-bold">{locationTitle} - ${price}</div>

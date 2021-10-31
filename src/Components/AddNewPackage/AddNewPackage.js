@@ -21,7 +21,7 @@ const AddNewPackage = () => {
         console.log(data)
     };
     return (
-        <div className='w-50 mx-auto'>
+        <div className='container'>
             <h2 className='text-center my-5'>Add new package</h2>
 
             <Form onSubmit={handleSubmit(onSubmit)}>

@@ -10,6 +10,7 @@ import PrivateRoute from './Components/Login/privateRoute';
 import ManageAllBookings from './Components/ManageAllBookings/ManageAllBookings';
 
 import MyBookings from './Components/MyBookings/MyBookings';
+import NotFound from './Components/PageNotFound/NotFound';
 
 import Header from './Components/Shared/Header/Header';
 import PlaceBooking from './Components/TourPackages/PlaceBooking';
@@ -52,6 +53,9 @@ function App() {
             </PrivateRoute>
             <Route path='/login'>
               <Login></Login>
+            </Route>
+            <Route path='*'>
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

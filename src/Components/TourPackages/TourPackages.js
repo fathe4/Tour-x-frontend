@@ -1,11 +1,13 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Spinner } from 'react-bootstrap';
 import SingleTourPackage from './SingleTourPackage';
+import useAuth from '../../hooks/useAuth';
 
 const TourPackages = () => {
     const [packages, setPackages] = useState([])
+    const { isLoading } = useAuth()
     useEffect(() => {
         fetch('https://sleepy-atoll-70174.herokuapp.com/packages')
             .then(res => res.json())
@@ -23,7 +25,10 @@ const TourPackages = () => {
                 </div>
                 <Row xs={1} md={3} className="g-4">
 
-                    {limitedPackage.map(singlePackage => <SingleTourPackage key={singlePackage._id} package={singlePackage}></SingleTourPackage>)}
+                    {isLoading ? <div className='d-flex justify-content-center' style={{ margin: '80px 0' }}>
+                        <Spinner className='mx-auto' animation="border" variant="danger" />
+                    </div>
+                        : limitedPackage.map(singlePackage => <SingleTourPackage key={singlePackage._id} package={singlePackage}></SingleTourPackage>)}
 
                 </Row>
             </div>

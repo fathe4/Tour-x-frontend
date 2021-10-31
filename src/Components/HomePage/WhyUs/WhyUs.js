@@ -10,19 +10,19 @@ const WhyUs = () => {
                 <div className="container">
 
                     <div className='row '>
-                        <div className="col">
+                        <div className="col my-lg-0 my-3">
                             <div className="card text-center py-5 px-2 text-white shadow" style={{ backgroundColor: '#315048' }}>
                                 <i class="fas fa-user-tie fs-1 text-white py-3"></i>
                                 <h3 className=''>2000+ Our worldwide guide</h3>
                             </div>
                         </div>
-                        <div className="col">
+                        <div className="col my-lg-0 my-3">
                             <div className="card text-center py-5 px-2 text-white shadow" style={{ backgroundColor: '#315048' }}>
                                 <i class="fas fa-user-shield fs-1 text-white py-3"></i>
-                                <h3 className=''>100% trusted travel agency</h3>
+                                <h3 className=''>Trusted travel agency</h3>
                             </div>
                         </div>
-                        <div className="col">
+                        <div className="col ">
                             <div className="card text-center py-5 px-2 text-white shadow" style={{ backgroundColor: '#315048' }}>
                                 <i class="fas fa-user-check fs-1 text-white py-3"></i>
                                 <h3 className=''>10+ year of travel experience</h3>
